@@ -1,5 +1,8 @@
-@import './base/fonts';
-@import './base/colors';
+@import './base/screen-size';
+@import './utils/mixin';
+@import './base/font';
+@import './base/color';
 @import './base/index';
 @import './layout/header';
 @import './layout/main';
+

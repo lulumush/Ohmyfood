@@ -1,8 +1,9 @@
+//layout for the header
 header{
     text-align: center;
     margin:20px 0;
 }
-@media screen and (max-width:767px) {
+@include screen-max-width($max-width){
     header img{
         width: 50%;
     }    
