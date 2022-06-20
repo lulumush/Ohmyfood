@@ -11,7 +11,7 @@
 	}
 }
 //command and explore button 
-@mixin button-box-shadow($color) {
+@mixin border-shadow($color) {
 	box-shadow: 0px 8px 16px 0 $color;	
 }
 @mixin primary-button{
@@ -21,13 +21,12 @@
     background: linear-gradient(to left top, $first-color, $second-color);
     transform: scale(1);
     transition: all 400ms;
-	@include button-box-shadow(darken($fourth-color,25));
+	font-weight: 500;
+	color: $white-color;
+	@include border-shadow(darken($fourth-color,25));
 	&:hover{
 		background:linear-gradient(to left top, lighten($first-color, 5%),lighten($second-color, 5%));
 		transform: scale(1.02);
-	}
-	a{
-		color:$white-color;
-		font-weight: 500;
+		@include border-shadow(darken($fourth-color,30));
 	}
 } 
