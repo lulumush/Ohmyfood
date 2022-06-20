@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="https://kit.fontawesome.com/e7d8ff9c92.js" crossorigin="anonymous"></script>
-        <title>Ohmyfood!</title>
-    </head>
-    <body>
-        <div class="container">
-            <!--header logo-->
-            <header>
-                <div class="logo__img">
-                    <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e7d8ff9c92.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood!</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--header logo-->
+        <header>
+            <div class="logo__img">
+                <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
+            </div>
+        </header>
+        <!--main content-->
+        <main>
+            <!--location section-->
+            <section class="location">
+                <div class="location__town">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Paris, Belleville</p>
                 </div>
-            </header>
-            <!--main content-->
-            <main>
-                <!--location section-->
-                <section class="location">
-                    <div class="location__town">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Paris, Belleville</p>
+                <div class="location__explore">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exception, sélectionnées par nos soins.</p>
+                    <div class="location__explore--button">
+                        <a href="#">Explorez nos restaurants</a>
                     </div>
-                    <div class="location__explore">
-                        <h1>Réservez le menu qui vous convient</h1>
-                        <p>Découvrez des restaurants d'exception, sélectionnées par nos soins.</p>
-                        <div class="location__explore--button">
-                            <a href="#">Explorez nos restaurants</a>   
-                        </div>                     
-                    </div>
-                </section>
-            </main>
-        </div>
-    </body>
+                </div>
+            </section>
+            <section class="functioning">
+                <h2>Fonctionnement</h2>
+                <ul>
+                    <li><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+                    <li><i class="fa-solid fa-list"></i>Composez votre menu</li>
+                    <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+                </ul>
+            </section>
+            
+        </main>
+    </div>
+</body>
+
 </html>

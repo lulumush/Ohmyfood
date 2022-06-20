@@ -3,7 +3,7 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-size:20px;
+    font-size:18px;
     font-weight: 100;
     padding: 0;
     font-family: $text_font_family;
@@ -16,4 +16,9 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
+h2{
+    font-size: 23px;
+    font-weight: bold;
+}
+
 

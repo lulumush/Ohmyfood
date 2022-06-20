@@ -7,8 +7,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $fourth-color;
-        box-shadow: inset 0 3px 5px -5px darken($fourth-color, 35%);
+        background-color: darken($fourth-color, 5);
+        box-shadow: inset 0 3px 5px -5px $black-color;
         p{
             font-weight: bold;  
             padding-left: 10px;     
@@ -16,32 +16,17 @@
     }
     //explore paragraph display
     &__explore{
-        background-color: lighten($fourth-color, 5%);
+        background-color: $fourth-color;
         margin: 0;
-        padding: 25px 35px;
+        padding: 45px;
         text-align: center;
         //explore button        
         &--button{
-            display: inline-block;
-            border-radius: 30px;         
-            padding: 15px 25px;   
-            background: linear-gradient(to left top, $first-color, $second-color);
-            box-shadow: 0 8px 16px 0 darken($fourth-color, 15%);
-            transform: scale(1);
-            transition: all 400ms;
-            a{
-                color:$white-color;
-                font-weight: 500;
-            }
-            &:hover{
-                background:linear-gradient(to left top, lighten($first-color, 5%),lighten($second-color, 5%));
-                box-shadow: 0 8px 16px 0 darken($fourth-color, 35%);
-                transform: scale(1.02);
-            }
+            @include primary-button;
         }        
     }       
 }
-//removing background color and box shadow for town location for screen bigger than phone
+//removing background color and box shadow for town location when screen is bigger than phone
 @include screen-min-width($min-width){
     .location{
         &__town{
@@ -50,3 +35,43 @@
         }    
     }    
 }
+// how it works section
+.functioning{
+    padding:35px;
+    font-weight: bold;
+    ul{
+        display: flex;
+        flex-wrap: wrap; 
+        padding:0;
+        gap:35px;        
+        list-style: none; 
+        counter-reset: list;       
+        li{
+            border-radius: 25px;
+            padding:35px 0;
+            flex:1 1 auto;
+            background-color: $fourth-color; 
+            @include button-box-shadow($fourth-color-dark);
+            i{
+                color: darken($fourth-color,37);  
+                padding: 0 35px;            
+            }
+            &:hover{                
+                background-color: $first-color-ligther;                
+                i{
+                    color:$first-color;                    
+                }
+            }
+            &::before{
+                counter-increment: list;
+                content: counter(list);
+                background-color: $first-color;
+                color:$white-color;
+                padding:4px 10px;
+                border-radius: 100%;
+                margin-left: -10px;
+            }        
+        }        
+    }
+}
+
