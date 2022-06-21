@@ -30,3 +30,12 @@
 		@include border-shadow(darken($fourth-color,30));
 	}
 } 
+@mixin favorite-animation{
+	opacity: 1;
+    color:transparent;
+    background: linear-gradient(to left bottom, $first-color, $second-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(1.40);
+    transition: all 400ms ease-in-out;
+}
