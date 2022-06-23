@@ -7,4 +7,15 @@ footer{
         font-family: $title_font_family;
         margin: 0;
     }
+    li{
+        padding:5px 0;
+    }
+    i{
+        padding:0 10px 0 0;
+    }    
+}
+@include screen-min-width($min-width){
+    footer{
+       text-align: center;
+    }    
 }

@@ -43,6 +43,7 @@ ul {
 }
 
 header {
+  position: relative;
   text-align: center;
   margin: 20px 0;
 }
@@ -59,8 +60,9 @@ header {
   background-color: #fff;
   opacity: 0.9;
   z-index: 1;
-  animation: fade-out 2s 4s forwards;
-  transform-origin: center;
+  animation-name: fade-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 .loader::after {
   content: "";
@@ -69,12 +71,11 @@ header {
   margin: auto;
   border: 10px solid #ffdff6;
   border-top: 10px solid #FF79DA;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 80px;
   height: 80px;
   animation: spin 2s ease-in-out infinite;
 }
-
 @keyframes spin {
   from {
     transform: rotate(360deg);
@@ -86,9 +87,10 @@ header {
   }
   to {
     opacity: 0;
-    position: unset;
+    z-index: -1;
   }
 }
+
 .location__town {
   display: flex;
   justify-content: center;
@@ -236,13 +238,13 @@ header {
 }
 .restaurant__listing__cards--favorite .full-heart {
   position: absolute;
-  opacity: 0;
   right: 0px;
   transition: all 400ms ease-in-out 0.2s;
   color: transparent;
   background: linear-gradient(to left bottom, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
+  opacity: 0;
 }
 .restaurant__listing__cards--favorite .full-heart:hover {
   opacity: 1;
@@ -258,6 +260,38 @@ footer {
 footer h2 {
   font-family: "Shrikhand", sans-serif;
   margin: 0;
+}
+footer li {
+  padding: 5px 0;
+}
+footer i {
+  padding: 0 10px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
+.back_icon {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.back_icon i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .back_icon i {
+    font-size: 30px;
+    left: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
