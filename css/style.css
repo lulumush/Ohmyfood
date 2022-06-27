@@ -13,6 +13,14 @@
     z-index: -1;
   }
 }
+@keyframes rotate-icon {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 *,
 ::before,
 ::after {
@@ -352,21 +360,53 @@ footer i {
 .menu__global__content__course__detail {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0px 8px 16px 0 #dddddd;
 }
 .menu__global__content__course__detail:hover {
+  cursor: pointer;
   box-shadow: 0px 8px 16px 0 #d0d0d0;
 }
-.menu__global__content__course__detail h4 {
-  padding: 0 0 5px 0;
+.menu__global__content__course__detail:hover .button--check {
+  flex: 1.5;
+  margin-right: 0;
+  opacity: 1;
+}
+.menu__global__content__course__detail:hover .button--check i {
+  animation: rotate-icon 500ms ease-in-out 400ms;
+}
+.menu__global__content__course__detail h4, .menu__global__content__course__detail p {
+  padding: 2px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__global__content__course__detail--description {
+  padding: 20px;
+  flex: 5;
+  overflow: hidden;
 }
 .menu__global__content__course__detail--price {
+  text-align: center;
+  flex: 0;
   font-weight: bold;
+  padding: 20px;
+}
+.menu__global__content__course__detail .button--check {
+  background-color: #99E2D0;
+  flex-shrink: 0;
+  text-align: center;
+  flex: 0;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  padding: 33px 0;
+  font-size: 25px;
+  opacity: 0;
+  transition: all 400ms ease-in-out 0.2s;
+  margin-right: -20px;
 }
 .menu__global__content--button {
   text-align: center;

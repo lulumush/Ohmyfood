@@ -53,22 +53,57 @@
                 &__detail{
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
                     align-items: flex-end;
+                    justify-content: space-between;
                     background-color: $white-color;
                     border-radius: 20px;
-                    padding: 20px;
+                    //padding:20px 0;
                     @include border-shadow($fourth-color-dark);
                     &:hover{
+                        cursor: pointer;
                         @include border-shadow($fourth-color-dark-shadow);
+                        .button--check{
+                            flex:1.5;  
+                            margin-right: 0;
+                            opacity: 1; 
+                            i{
+                                animation: rotate-icon 500ms ease-in-out 400ms;
+                            }                             
+                        }
                     }
-                    h4{
-                        padding:0 0 5px 0;
+                    h4,p{
+                        padding:2px 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    &--description{
+                        //border: 2px solid purple;
+                        padding:20px;
+                        flex:5;
+                        overflow: hidden;
                     }
                     &--price{
+                        //border: 2px solid purple;
+                        text-align: center;
+                        flex:0;
                         font-weight: bold;
-                    }
-
+                        padding:20px;
+                    } 
+                    .button--check{
+                        //border: 2px solid purple;
+                        background-color: $third-color;
+                        flex-shrink: 0;
+                        text-align: center;
+                        flex:0;
+                        color:$white-color; 
+                        border-radius: 0 20px 20px 0;
+                        padding:33px 0;    
+                        font-size: 25px; 
+                        opacity: 0;
+                        transition: all 400ms ease-in-out 0.2s; 
+                        margin-right:-20px; 
+                    }                                      
                 }
             }
             &--button{
