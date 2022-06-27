@@ -1,0 +1,94 @@
+.menu{
+    &__img{
+        img{
+            width: 100%;
+            height:250px;
+            object-fit: cover;
+        }
+    }
+    &__global{
+        border-radius: 50px 50px 0 0;
+        background-color: $fourth-color;
+        position: relative;
+        top: -50px;
+        margin-bottom: -50px;
+        padding:45px 35px 65px 35px;
+        &__header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: $title-font-family;
+            &--favorite{
+                font-size: 22px;
+                position: relative;
+                .full-heart{
+                    position: absolute;
+                    right: 0;
+                    @include favorite-icon;
+                }
+            }
+        }
+        &__content{
+            margin-top:55px;
+            gap:55px;
+            display: flex;
+            flex-direction: column;
+            &__course{
+                display: flex;
+                flex-direction: column;
+                gap:35px;
+                h3{
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    position: relative;
+                    &::after{
+                        content: " ";
+                        position: absolute;
+                        width: 50px;
+                        left: 0;
+                        top:25px;
+                        border:2px solid $third-color;
+                    }
+                }
+                &__detail{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    background-color: $white-color;
+                    border-radius: 20px;
+                    padding: 20px;
+                    @include border-shadow($fourth-color-dark);
+                    &:hover{
+                        @include border-shadow($fourth-color-dark-shadow);
+                    }
+                    h4{
+                        padding:0 0 5px 0;
+                    }
+                    &--price{
+                        font-weight: bold;
+                    }
+
+                }
+            }
+            &--button{
+                @include button;
+                align-self: center;            
+            }
+            @include screen-min-width($min-width){
+                &__course{
+                    width: 80%;
+                    align-self: center;
+                    h3{
+                        text-align: center;
+                        &::after{
+                            left:0;
+                            right:0;
+                            margin: auto;
+                        }
+                    }                    
+                }
+            }                      
+        }
+    }
+}

@@ -1,0 +1,139 @@
+//loader
+.loader {
+    @include loading;
+}
+.location{
+    background-color: $fourth-color-dark;
+    &__town{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 3px 5px -5px $black-color;
+        padding:20px 0;
+        p{
+            font-weight: bold;  
+            padding-left: 10px;     
+        } 
+    }
+    &__explore{
+        display: flex;
+        flex-direction: column;
+        padding: 45px 35px;
+        background-color: $fourth-color;
+        align-items: center;
+        text-align: center;
+        &--button{
+            @include button;
+        }
+        p{
+            padding:25px 0;
+        }
+    }
+}
+//removing background color and box shadow for town location when screen is bigger than phone
+@include screen-min-width($min-width){
+    .location{
+        background-color: transparent;
+        &__town{
+            box-shadow: none;            
+        }    
+    }    
+}
+// how it works section
+.functioning{
+    padding: 45px 35px;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap:35px;
+        li{
+            border-radius: 25px;
+            padding:35px 0;
+            flex:1 1 auto;
+            background-color: $fourth-color;
+            @include border-shadow($fourth-color-dark);
+            i{
+                color: darken($fourth-color,37);  
+                padding: 0 25px;            
+            }
+            .functioning--number{
+                font-family: $text_font_family;
+                background-color: $first-color;
+                color:$white-color;
+                padding:6px 9px;
+                margin-left: -10px;
+                border-radius: 100%;
+            }
+            &:hover{          
+                @include border-shadow($fourth-color-dark-shadow);      
+                background-color: $first-color-ligther;                
+                .fa-icon{
+                    color:$first-color;                    
+                }
+            } 
+        }
+    }
+}
+//restaurants listing
+.restaurant{
+    background-color: $fourth-color;
+    padding: 45px 35px;
+    &__listing{
+        &__cards{
+            padding:25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap:35px;
+            a{
+                flex: 1 1 100%;
+            }
+            @include screen-min-width($min-width){
+                a{
+                    flex: 1 1 48%;
+                }
+            } 
+            &__singlecard{
+                position: relative;
+                border-radius: 20px; 
+                background-color: $white-color;
+                @include border-shadow($fourth-color-dark);  
+                &:hover{
+                    @include border-shadow($fourth-color-dark-shadow);
+                }              
+                img{
+                    border-radius: 20px 20px 0 0;
+                    object-fit: cover;
+                    width: 100%;
+                    height:200px;
+                }
+                .new{
+                    position: absolute;
+                    top:20px;
+                    right:20px;
+                    color: darken($third-color, 40);
+                    font-weight: bold;
+                    background-color: $third-color;
+                    padding:5px 15px;
+                    border-radius: 5px;
+                    @include border-shadow(darken($fourth-color-dark,50));
+                }
+                &--description{
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    padding: 10px 20px 15px 20px;
+                }
+                //favorite icon and animation
+                &--favorite{
+                    font-size: 22px;
+                    position: relative;
+                    .full-heart{
+                        position: absolute;
+                        right: 0;
+                        @include favorite-icon;
+                    }
+                }
+            }
+        }
+    }
+}

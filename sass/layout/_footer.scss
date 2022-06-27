@@ -1,11 +1,13 @@
 footer{
-    padding:35px;
+    padding:45px 35px;
     background-color: $footer-color;
     color:$white-color;
     font-size: 15px;
     h2{
         font-family: $title_font_family;
-        margin: 0;
+    }
+    ul{
+        margin-bottom:0;
     }
     li{
         padding:5px 0;
