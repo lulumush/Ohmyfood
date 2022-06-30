@@ -28,6 +28,18 @@
                 }
             }
         }
+        @include screen-min-width($min-width){
+            &__header{
+                justify-content: center;
+                margin: auto;
+                h1{
+                    font-size: 30px;
+                }
+                &--favorite{
+                    margin-left:35px;
+                }
+            }
+        }
         &__content{
             margin-top:55px;
             gap:55px;
@@ -82,6 +94,9 @@
                         padding:20px;
                         flex:5;
                         overflow: hidden;
+                        p{
+                            font-size:16px;
+                        }
                     }
                     &--price{
                         //border: 2px solid purple;
@@ -98,7 +113,7 @@
                         flex:0;
                         color:$white-color; 
                         border-radius: 0 20px 20px 0;
-                        padding:33px 0;    
+                        padding:32px 0;    
                         font-size: 25px; 
                         opacity: 0;
                         transition: all 400ms ease-in-out 0.2s; 
@@ -112,7 +127,7 @@
             }
             @include screen-min-width($min-width){
                 &__course{
-                    width: 80%;
+                    width: 70%;
                     align-self: center;
                     h3{
                         text-align: center;
