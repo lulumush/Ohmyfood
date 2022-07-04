@@ -10,7 +10,7 @@
 		@content;
 	}
 }
-//loading animation
+//main page loading animation
 @mixin loading {
 	position:fixed;
     inset: 0;
@@ -86,11 +86,23 @@
         @include favorite-animation;
     }
 }
+//restaurant menu chek animation
 @keyframes rotate-icon{
 	from{
 		transform:rotate(-360deg);
 	}
 	to{
 		transform:rotate(0deg);
+	}
+}
+//restaurant menu loading animation
+@keyframes menu-loading-display{
+	from{
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0%);
+		opacity: 1;
 	}
 }

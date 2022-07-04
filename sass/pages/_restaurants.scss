@@ -59,10 +59,17 @@
                         width: 50px;
                         left: 0;
                         top:25px;
-                        border:2px solid $third-color;
+                        border-bottom:3px solid $third-color;
                     }
                 }
                 &__detail{
+                    @for $i from 1 through 5{
+                        &:nth-child(#{$i}){
+                            animation-delay: 400ms * $i;
+                        }
+                    }
+                    animation: menu-loading-display 1s;
+                    animation-fill-mode: backwards;
                     display: flex;
                     flex-direction: row;
                     align-items: flex-end;
@@ -75,8 +82,8 @@
                         cursor: pointer;
                         @include border-shadow($fourth-color-dark-shadow);
                         .button--check{
-                            flex:1.5;  
-                            margin-right: 0;
+                            flex:1;  
+                            margin-left:20px;
                             opacity: 1; 
                             i{
                                 animation: rotate-icon 500ms ease-in-out 400ms;
@@ -90,23 +97,20 @@
                         text-overflow: ellipsis;
                     }
                     &--description{
-                        //border: 2px solid purple;
                         padding:20px;
-                        flex:5;
+                        flex:3;
                         overflow: hidden;
                         p{
                             font-size:16px;
                         }
                     }
                     &--price{
-                        //border: 2px solid purple;
-                        text-align: center;
-                        flex:0;
+                        text-align: right;
+                        flex:1;
                         font-weight: bold;
-                        padding:20px;
+                        padding:20px 0 20px 20px;
                     } 
                     .button--check{
-                        //border: 2px solid purple;
                         background-color: $third-color;
                         flex-shrink: 0;
                         text-align: center;
@@ -117,8 +121,9 @@
                         font-size: 25px; 
                         opacity: 0;
                         transition: all 400ms ease-in-out 0.2s; 
-                        margin-right:-20px; 
-                    }                                      
+                        margin-right:0;  
+                        
+                    }                                   
                 }
             }
             &--button{
