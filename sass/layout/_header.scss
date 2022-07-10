@@ -4,6 +4,7 @@ header{
     margin:30px 0;
     text-align: center;
 }
+//header for desktop and tablet
 @include screen-max-width($max-width){
     .logo__img img{
         width:50%;

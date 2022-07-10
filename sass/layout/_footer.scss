@@ -1,3 +1,4 @@
+//layout for the footer
 footer{
     padding:45px 35px;
     background-color: $footer-color;
@@ -16,6 +17,7 @@ footer{
         padding:0 10px 0 0;
     }    
 }
+//footer display for desktop and tablet screen
 @include screen-min-width($min-width){
     footer{
        text-align: center;

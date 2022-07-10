@@ -1,3 +1,4 @@
+// individual restaurants pages
 .menu{
     &__img{
         img{
@@ -45,10 +46,12 @@
             gap:55px;
             display: flex;
             flex-direction: column;
+            // different course listing
             &__course{
                 display: flex;
                 flex-direction: column;
                 gap:35px;
+                //courses's name
                 h3{
                     text-transform: uppercase;
                     font-weight: 100;
@@ -61,8 +64,9 @@
                         top:25px;
                         border-bottom:3px solid $third-color;
                     }
-                }
+                } 
                 &__detail{
+                    //loading course animation
                     @for $i from 1 through 5{
                         &:nth-child(#{$i}){
                             animation-delay: 400ms * $i;
@@ -70,17 +74,18 @@
                     }
                     animation: menu-loading-display 1s;
                     animation-fill-mode: backwards;
+                     //individual courses detail
                     display: flex;
                     flex-direction: row;
                     align-items: flex-end;
                     justify-content: space-between;
                     background-color: $white-color;
                     border-radius: 20px;
-                    //padding:20px 0;
                     @include border-shadow($fourth-color-dark);
                     &:hover{
                         cursor: pointer;
                         @include border-shadow($fourth-color-dark-shadow);
+                        //check animation on each courses item on mouse over
                         .button--check{
                             flex:1;  
                             margin-left:20px;
@@ -96,6 +101,7 @@
                         white-space: nowrap;
                         text-overflow: ellipsis;
                     }
+                    //courses description
                     &--description{
                         padding:20px;
                         flex:3;
@@ -104,12 +110,14 @@
                             font-size:16px;
                         }
                     }
+                    //courses price
                     &--price{
                         text-align: right;
                         flex:1;
                         font-weight: bold;
                         padding:20px 0 20px 20px;
                     } 
+                    //check animation on each courses item
                     .button--check{
                         background-color: $third-color;
                         flex-shrink: 0;
@@ -126,10 +134,12 @@
                     }                                   
                 }
             }
+            // order button
             &--button{
                 @include button;
                 align-self: center;            
             }
+            // restaurant menu display for desktop and tablet
             @include screen-min-width($min-width){
                 &__course{
                     width: 70%;
