@@ -58,8 +58,12 @@ h2 {
   font-size: 24px;
 }
 
-h4, h3 {
+h3 {
   font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 ul {
@@ -317,9 +321,12 @@ footer i {
   top: -50px;
   margin-bottom: -50px;
   padding: 45px 35px 65px 35px;
+  display: flex;
+  flex-direction: column;
 }
 .menu__global__header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-family: "Shrikhand", sans-serif;
@@ -410,7 +417,7 @@ footer i {
   box-shadow: 0px 8px 16px 0 #d0d0d0;
 }
 .menu__global__content__course__detail:hover .button--check {
-  flex: 1;
+  flex: 2;
   margin-left: 20px;
   opacity: 1;
 }
@@ -425,7 +432,7 @@ footer i {
 }
 .menu__global__content__course__detail--description {
   padding: 20px;
-  flex: 3;
+  flex: 5;
   overflow: hidden;
 }
 .menu__global__content__course__detail--description p {
@@ -450,7 +457,8 @@ footer i {
   transition: all 400ms ease-in-out 0.2s;
   margin-right: 0;
 }
-.menu__global__content--button {
+.menu__global--button {
+  margin-top: 65px;
   text-align: center;
   border-radius: 30px;
   padding: 15px 45px;
@@ -460,17 +468,21 @@ footer i {
   font-weight: 500;
   color: #fff;
   box-shadow: 0px 8px 16px 0 #b6b6b6;
+  width: 200px;
   align-self: center;
 }
-.menu__global__content--button:hover {
+.menu__global--button:hover {
   background: linear-gradient(to left top, #a16be0, #ff93e1);
   transform: scale(1.02);
   box-shadow: 0px 8px 16px 0 #aaaaaa;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1250px) {
+  .menu__global__content {
+    flex-direction: row;
+    gap: 20px;
+  }
   .menu__global__content__course {
-    width: 70%;
-    align-self: center;
+    flex: 1;
   }
   .menu__global__content__course h3 {
     text-align: center;
