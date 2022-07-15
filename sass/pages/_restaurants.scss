@@ -94,7 +94,6 @@
                         //check animation on each courses item on mouse over
                         .button--check{
                             flex:2;  
-                            margin-left:20px;
                             opacity: 1; 
                             i{
                                 animation: rotate-icon 500ms ease-in-out 400ms;
@@ -119,9 +118,9 @@
                     //courses price
                     &--price{
                         text-align: right;
-                        flex:1;
+                        flex:0;
                         font-weight: bold;
-                        padding:20px 0 20px 20px;
+                        padding:20px;
                     } 
                     //check animation on each courses item
                     .button--check{
@@ -136,7 +135,7 @@
                         opacity: 0;
                         transition: all 400ms ease-in-out 0.2s; 
                         margin-right:0;  
-                        
+                        width: 0;                        
                     }                                   
                 }
             }                                  

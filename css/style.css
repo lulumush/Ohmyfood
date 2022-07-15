@@ -418,7 +418,6 @@ footer i {
 }
 .menu__global__content__course__detail:hover .button--check {
   flex: 2;
-  margin-left: 20px;
   opacity: 1;
 }
 .menu__global__content__course__detail:hover .button--check i {
@@ -440,9 +439,9 @@ footer i {
 }
 .menu__global__content__course__detail--price {
   text-align: right;
-  flex: 1;
+  flex: 0;
   font-weight: bold;
-  padding: 20px 0 20px 20px;
+  padding: 20px;
 }
 .menu__global__content__course__detail .button--check {
   background-color: #99E2D0;
@@ -456,6 +455,7 @@ footer i {
   opacity: 0;
   transition: all 400ms ease-in-out 0.2s;
   margin-right: 0;
+  width: 0;
 }
 .menu__global--button {
   margin-top: 65px;
