@@ -39,7 +39,6 @@
 
 body {
   font-family: "Roboto", "sans_serif";
-  font-size: 18px;
   font-weight: 100;
   padding: 0;
 }
@@ -181,6 +180,8 @@ header {
   }
 }
 .functioning {
+  max-width: 1240px;
+  margin: auto;
   padding: 45px 35px;
 }
 .functioning ul {
@@ -197,7 +198,7 @@ header {
 }
 .functioning ul li i {
   color: #989898;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .functioning ul li .functioning--number {
   font-family: "Roboto", "sans_serif";
@@ -216,6 +217,8 @@ header {
 }
 
 .restaurant {
+  max-width: 1240px;
+  margin: auto;
   background-color: #f6f6f6;
   padding: 45px 35px;
 }
@@ -315,6 +318,8 @@ footer i {
   object-fit: cover;
 }
 .menu__global {
+  max-width: 1240px;
+  margin: auto;
   border-radius: 50px 50px 0 0;
   background-color: #f6f6f6;
   position: relative;
@@ -476,7 +481,7 @@ footer i {
   transform: scale(1.02);
   box-shadow: 0px 8px 16px 0 #aaaaaa;
 }
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1240px) {
   .menu__global__content {
     flex-direction: row;
     gap: 20px;

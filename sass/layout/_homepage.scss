@@ -41,6 +41,8 @@
 }
 // how it works section
 .functioning{
+    max-width: 1240px;
+    margin: auto;
     padding: 45px 35px;
     ul{
         display: flex;
@@ -54,7 +56,7 @@
             @include border-shadow($fourth-color-dark);
             i{
                 color: darken($fourth-color,37);  
-                padding: 0 20px;            
+                padding: 0 10px;            
             }
             .functioning--number{
                 font-family: $text_font_family;
@@ -72,10 +74,13 @@
                 }
             } 
         }
+        
     }
 }
 //restaurants listing
 .restaurant{
+    max-width: 1240px;
+    margin: auto;
     background-color: $fourth-color;
     padding: 45px 35px;
     &__listing{
